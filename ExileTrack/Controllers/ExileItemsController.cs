@@ -30,10 +30,7 @@ namespace ExileTrack.Controllers
             return Ok(value);
         }
 
-        [HttpsGet("Flaskprofit")]
-        public async Task<IActionResult> GetFlaskProfit(){
-            
-        }
+       
 
 
 

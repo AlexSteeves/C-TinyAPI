@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExileTrack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c06bb8daae4e55a3cd6f22b61355b71866e925c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExileTrack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExileTrack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
