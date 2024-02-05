@@ -1,0 +1,12 @@
+{
+    "Materials": [
+        {"Enkindling Orb": 29},
+        {"Orb of Alteration": 66 },
+        {"Orb of Scouring": 30},
+        {"Glassblower's Bauble" : 66}
+    ],
+    "Base Type":[
+        {"Item Name": "Gold Flask"},
+        {"Item Level": 82}
+    ]
+}

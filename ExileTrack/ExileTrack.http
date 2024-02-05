@@ -1,0 +1,6 @@
+@ExileTrack_HostAddress = http://localhost:5228
+
+GET {{ExileTrack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
