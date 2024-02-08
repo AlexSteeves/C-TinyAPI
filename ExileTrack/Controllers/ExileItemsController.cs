@@ -30,6 +30,16 @@ namespace ExileTrack.Controllers
             return Ok(value);
         }
 
+        [HttpGet("FlaskProfit")]
+        public async Task<IActionResult> GetFlaskProfit()
+        {
+            // Await the async operation and get the result
+            Dictionary<string, Dictionary<string, double>> value = await ExilePipeline.GetFlaskProfits();
+
+
+            return Ok(value);
+        }
+
        
 //"url": "https://None@exiletrack.scm.azurewebsites.net/ExileTrack.git"
 

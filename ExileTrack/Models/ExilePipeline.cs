@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 
 
 using System.Text;
+using System.ComponentModel;
 
 
 namespace ExileTrack.Models
@@ -25,11 +26,10 @@ namespace ExileTrack.Models
         {
 
 
-            await GetBeasts("Farric Tiger Alpha");
-            await GetBeasts("Farrul, First of the Plains");
-            //GetAuth().GetAwaiter().GetResult();
-            //await SendPostRequest();
-            /*
+            //await GetBeasts("Farric Tiger Alpha");
+            //await GetBeasts("Farrul, First of the Plains");
+            
+            
             var materials = GetMaterialsList("./data.JSON");
             var totalCost = 0.0;
             foreach (var material in materials)
@@ -37,24 +37,51 @@ namespace ExileTrack.Models
 
                 totalCost += await GetItemPrice(material.Key) * material.Value;
             }
-            Console.WriteLine($"Total Cost of Materials:{Math.Round(totalCost, 2)}");
-            */
+
+
+    
+            
+            
             //await GetFragmentPrice("Fragment of the Hydra");
             //await GetMapPrice("Lair of the Hydra Map");
         }
 
-        public static double ExilePipeLine()
-        {
-            // Example implementation. Replace with your actual logic.
-            return 42.0; // Returning a dummy value for demonstration.
+
+        public static async Task<Dictionary<string, Dictionary<string, double>>> GetFlaskProfits(){
+            var path = "./data.JSON";
+
+            Dictionary<string, Dictionary<string, double>> result = new Dictionary<string, Dictionary<string, double>>();
+
+            Dictionary<string, double> materialCost = GetMaterialsList(path);
+
+           
+            var totalCost = 0.0;
+            foreach (var material in materialCost)
+            {
+
+                totalCost += await GetItemPrice(material.Key) * material.Value;
+            }
+
+            Dictionary<string, string> flaskBaseStats = getFlaskStats(path);
+            materialCost.Add("Materials Cost", totalCost);
+            
+            result.Add(flaskBaseStats["Item Name"], materialCost);
+
+            
+            
+
+            return result;
+            
         }
 
+      
 
 
-        public static Dictionary<string, int> GetMaterialsList(string pathToJson)
+
+        public static Dictionary<string, double> GetMaterialsList(string pathToJson)
         {
 
-            var materials = new Dictionary<string, int>();
+            var materials = new Dictionary<string, double>();
             try
             {
                 var json = File.ReadAllText(pathToJson);
@@ -66,7 +93,7 @@ namespace ExileTrack.Models
                 {
                     foreach (JProperty prop in material)
                     {
-                        materials.Add(prop.Name, (int)prop.Value);
+                        materials.Add(prop.Name, (double)prop.Value);
                     }
                 }
 
@@ -77,6 +104,33 @@ namespace ExileTrack.Models
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
             return materials;
+
+        }
+        public static Dictionary<string, string> getFlaskStats(string pathToJson){
+            Dictionary<string, string> result = new Dictionary<string, string>();
+          
+
+            try{
+                var json = File.ReadAllText(pathToJson);
+                var jsonObject = JsonConvert.DeserializeObject<dynamic>(json);
+
+                var baseTypesArray = jsonObject?["Base Type"];
+                foreach (var material in baseTypesArray!)
+                {
+                    foreach (JProperty prop in material)
+                    {
+                        result.Add(prop.Name, (string)prop.Value!);
+                    }
+                }
+               
+
+
+            }catch(Exception ex){
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+
+            return result;
 
         }
 
@@ -138,7 +192,7 @@ namespace ExileTrack.Models
                             if ((string)item.name == name)
                             {
                                 // Assuming chaosEquivalent is the price and it's a double
-                                Console.WriteLine($"{name}: {(double)item.chaosValue}");
+                             
 
                                 result.Add(name, beastPrice);
                                 beastPrice = item.chaosValue;

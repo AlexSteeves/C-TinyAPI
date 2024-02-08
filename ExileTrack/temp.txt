@@ -1,0 +1,15 @@
+
+{
+    Flask:,
+    {
+        Gold Flask,
+        Base: 20
+        material 1 : 30
+        Material 2 : 30
+
+        total cost : 30
+
+    }
+}
+
+
