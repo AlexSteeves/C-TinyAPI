@@ -28,6 +28,20 @@ As of this date I will only be using API data from poe.ninja because I have not 
 
 
 
+### How to use
+- Download .net and ASP.NET depencencies on local machine
+- Run "git clone https://github.com/AlexSteeves/ExileTrack.git"
+- Type "dotnet run"
 
+The api will be running on http://localhost:<port name>
+
+To access Flask Profit data look at http://localhost:<port name>/api/ExileItems/FlaskProfit
+![alt text](image.png)
+
+JSON data will appear:
+![alt text](image-1.png)
+
+This is the current price of materials to craft a gold flask. The JSON input looks as follows:
+![alt text](image-2.png)
 
 

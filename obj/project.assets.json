@@ -8151,11 +8151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/asteeves/Documents/Programming/C#/C#TinyAPI/ExileTrack.csproj",
+      "projectUniqueName": "/Users/asteeves/Documents/Programming/C#/ExileTrack/ExileTrack/ExileTrack.csproj",
       "projectName": "ExileTrack",
-      "projectPath": "/Users/asteeves/Documents/Programming/C#/C#TinyAPI/ExileTrack.csproj",
+      "projectPath": "/Users/asteeves/Documents/Programming/C#/ExileTrack/ExileTrack/ExileTrack.csproj",
       "packagesPath": "/Users/asteeves/.nuget/packages/",
-      "outputPath": "/Users/asteeves/Documents/Programming/C#/C#TinyAPI/obj/",
+      "outputPath": "/Users/asteeves/Documents/Programming/C#/ExileTrack/ExileTrack/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/asteeves/.nuget/NuGet/NuGet.Config"

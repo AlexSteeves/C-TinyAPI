@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kRVMsp5tte2ZuRadZasVnxHYejrMMKhq3I2FQ+aHSdbkjOhrIHCXMhc2puhQPelMjp3pN7AyZX3+q1BZWftIEA==",
+  "dgSpecHash": "1CYoHwVg0dbHsIOn1DD9bxWyYUTlwEz9pkMZpSM0e3uRgi0Uk6jhpF9f6i1yoUlvC+C0dcNhcbclKEAJchBxJA==",
   "success": true,
-  "projectFilePath": "/Users/asteeves/Documents/Programming/C#/C#TinyAPI/ExileTrack.csproj",
+  "projectFilePath": "/Users/asteeves/Documents/Programming/C#/ExileTrack/ExileTrack/ExileTrack.csproj",
   "expectedPackageFiles": [
     "/Users/asteeves/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/asteeves/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
