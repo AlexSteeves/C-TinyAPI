@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ExileTrack.Models;
 //https://None@exiletrack.scm.azurewebsites.net/ExileTrack.git
+//https://exiletrack.scm.azurewebsites.net:443/ExileTrack.git
 namespace ExileTrack.Controllers
 {
     [Route("api/[controller]")]
