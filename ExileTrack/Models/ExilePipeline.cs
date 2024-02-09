@@ -29,6 +29,7 @@ namespace ExileTrack.Models
             //await GetBeasts("Farric Tiger Alpha");
             //await GetBeasts("Farrul, First of the Plains");
             
+            //https://www.pathofexile.com/trade/search/Affliction/rMOdrQmIQ
             
             var materials = GetMaterialsList("./data.JSON");
             var totalCost = 0.0;
